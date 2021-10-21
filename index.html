@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet"> 
+  <title>Calculator</title>
+
+</head>
+<body>
+  <header>
+    <h1>calc</h1>
+    <div id ="theme">
+      <p class="number_theme">1 2 3</p>
+      <p class="text_theme">THEME</p>
+    <button class="button_theme" onclick="change_theme()" value="change"><div class ="ball"></div></button>
+  </div>
+  </header>
+  <main>
+    <section id="result">
+      <p id="value">0</p>
+    </section>
+    <section id="inputs">
+      <input type="button" onclick ="calcul(value)" value="7" class="number">
+      <input type="button" onclick ="calcul(value)" value="8" class="number">
+      <input type="button" onclick ="calcul(value)" value="9"  class="number">
+      <input type="button" onclick ="calcul(value)" value="DEL" class="del">
+      <input type="button" onclick ="calcul(value)" value="4"  class="number">
+      <input type="button" onclick ="calcul(value)" value="5"  class="number">
+      <input type="button" onclick ="calcul(value)" value="6"  class="number">
+      <input type="button" onclick ="calcul(value)" value="+" class="operator">
+      <input type="button" onclick ="calcul(value)" value="1"  class="number">
+      <input type="button" onclick ="calcul(value)" value="2"  class="number">
+      <input type="button" onclick ="calcul(value)" value="3"  class="number">
+      <input type="button" onclick ="calcul(value)" value="-" class="operator">
+      <input type="button" onclick ="calcul(value)" value="." class="operator">
+      <input type="button" onclick ="calcul(value)" value="0"  class="number">
+      <input type="button" onclick ="calcul(value)" value="/" class="operator"> 
+      <input type="button" onclick ="calcul(value)" value="x" class="operator">
+      <input type="button" onclick ="calcul(value)" value="RESET" class="reset">
+      <input type="button" onclick ="calcul(value)" value="=" class="equal">
+    </section>
+  </main>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>

@@ -1,0 +1,169 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.theme_1{
+    --background: #3b4664;
+    --result-container: #181f32;
+    --inputs-container: #252c46;
+    --result-number: #fffdff;
+    --inputs-button: #eae3db;
+    --inputs-numbers: #444a58;
+    --del-reset-button: #647299;
+    --del-reset-equal-text: #fbffff;
+    --equal-button: #d13f30;
+    --shadow-buttons: #b2a295;
+    --shadow-del-reset: #414e71;
+    --shadow-equal: #96271c;
+    --ball: 5px;
+}
+
+.theme_2{
+    --background: #e6e6e6;
+    --result-container: #eeeeee;
+    --inputs-container: #d3cdcd;
+    --result-number: #353529;
+    --inputs-button: #e5e4e0;
+    --inputs-numbers: #36362c;
+    --del-reset-button: #388187;
+    --del-reset-equal-text: #f5ffff;
+    --equal-button: #cb5200;
+    --shadow-buttons: #a79d91;
+    --shadow-del-reset: #1c6168;
+    --shadow-equal: #893a02;
+    --ball: 22px;
+}
+
+.theme_3{
+    --background: #17062a;
+    --result-container: #1e0836;
+    --inputs-container: #1e0836;
+    --result-number: #ffe139;
+    --inputs-button: #331b4d;
+    --inputs-numbers: #fde43f;
+    --del-reset-button: #56077c;
+    --del-reset-equal-text: #fffbff;
+    --equal-button: #00decf;
+    --shadow-buttons: #851c9d;
+    --shadow-del-reset: #bf15f4;
+    --shadow-equal: #6df9f0;
+    --ball: 39px;
+}
+
+body{
+    background-color: var(--background);
+    font-family: 'Spartan', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 275px;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    color: var(--result-number);
+}
+
+#theme{
+    display: grid;
+    grid-template-rows: 18px 20px;
+    grid-template-columns: 60px 60px;
+    text-align: center;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+
+.number_theme{
+    grid-area: 1 / 2 / span 1 / span 1;
+    color :var(--result-number);
+    font-size: 12px;
+    word-spacing: 8px;
+}
+
+.text_theme{
+    grid-area: 2 / 1 / span 1 / span 1;
+    color :var(--result-number);
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.button_theme{
+    grid-area: 2 / 2 / span 1 / span 1;
+    background-color: var(--inputs-container);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ball{
+    width: 14px;
+    height: 14px;
+    border-radius: 20px;
+    background-color: var(--equal-button);
+    margin-left: var(--ball);
+}
+
+#result{
+    height: 70px;
+    background-color: var(--result-container);
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#inputs{
+    padding: 20px;
+    background-color: var(--inputs-container);
+    border-radius: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    grid-template-columns: 50px 50px 50px 50px;
+    align-content: center;
+    justify-content: center;
+}
+
+.number, .operator{
+    background-color: var(--inputs-button);
+    color: var(--inputs-numbers);
+    font-size: 24px;
+    box-shadow: 0px 3px var(--shadow-buttons);
+}
+
+.number, .operator, .reset, .del, .equal{
+    border: none;
+    font-family: 'Spartan', sans-serif;
+    border-radius: 5px;
+}
+
+.reset{
+    background-color: var(--del-reset-button);
+    color: var(--del-reset-equal-text);
+    grid-area: 5 / 1 / 5 / span 2;
+    box-shadow: 0px 3px var(--shadow-del-reset);
+}
+.del{
+    background-color: var(--del-reset-button);
+    color: var(--del-reset-equal-text);
+    box-shadow: 0px 3px var(--shadow-del-reset);
+}
+.equal{
+    background-color: var(--equal-button);
+    color: var(--del-reset-equal-text);
+    grid-area: 5 / 3 / 5 / span 2;
+    box-shadow: 0px 3px var(--shadow-equal);
+}
+
+#value{
+    color: var(--result-number);
+    font-size: 28px;
+    text-align: right;
+    padding: 20px;
+}
