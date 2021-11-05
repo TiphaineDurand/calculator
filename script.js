@@ -33,6 +33,20 @@ let operator = [];
 let number = 0;
 let j = 0;
 
+document.addEventListener("keydown", () => {board(event.key)});
+
+function board(code) {
+    if (0 <= code && code <= 9)
+        calcul(code);
+    if (code == '+' || code == '-' || code == '/')
+        calcul(code);
+    if (code == '*')
+        calcul('x');
+    if (code == 'Enter')
+        calcul('=');
+    if (code == 'Backspace')
+        calcul('DEL');
+}
 
 function calcul(value) {
     if (value == "RESET") {
